@@ -1,14 +1,23 @@
-import Head from "next/head";
+import BarraNavegacion from "@/components/layout/header/barraNav";
+import TituloPagina from "@/components/layout/header/tituloPagina";
+import MainContainerCss from "@/components/pages/css/main/mainContainerCss";
+import styled from "styled-components";
 
-export default function CSS() {
+const MainStyles = styled.main`
+  display: flex;
+`;
+
+export default function CssPage() {
   return (
     <>
-      <Head>
-        <title>CSS</title>
-      </Head>
-      <main>
-        <h1>CSS</h1>
-      </main>
+      <header>
+        <TituloPagina titulo="CSS" />
+        <BarraNavegacion page="css" />
+      </header>
+      <MainStyles>
+        <MainContainerCss />
+      </MainStyles>
+      {/* <footer><CopiRait/></footer> */}
     </>
   );
 }

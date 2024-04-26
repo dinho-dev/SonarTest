@@ -1,8 +1,15 @@
+import styled from 'styled-components';
 import Head from "next/head";
 import Image from "next/image";
-import BarraNav from "../components/layout/header/barraNav";
-import Saludo from "../components/layout/main/saludo";
-import Contador from "../components/pages/home/footer/contador";
+import BarraNav from "@/components/layout/header/barraNav";
+import Saludo from "@/components/layout/main/saludo";
+import Contador from "@/components/pages/home/footer/contador";
+
+const StyledHeader = styled.header`
+  background-color: #FFEFD5;
+  color: #black;
+  padding: 20px;
+`;
 
 export default function Home() {
   return (
@@ -14,9 +21,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
     </Head>
-    <header>
+    <StyledHeader>
       <BarraNav/>
-    </header>
+    </StyledHeader>
     <main>
       <Saludo/>
     </main>
